@@ -163,7 +163,12 @@
     <h2>Permissions the app requests</h2>
     <p>DoomBlock is an app blocker, so it asks for a few sensitive permissions. Each one is used only for the purpose below:</p>
     <ul>
-      <li><strong>Accessibility service</strong> - detects which app is in front so a block can be enforced. It does not read, store, or send the contents of your screen.</li>
+      <li><strong>Accessibility service</strong> - enabled only after you accept a separate on-screen disclosure, and you can turn it off anytime in Android Settings &rarr; Accessibility. It collects two things:
+        <ul>
+          <li><em>Which app is currently in the foreground</em>, so a block can be enforced the moment a blocked app opens.</li>
+          <li><em>Web browsing history</em> - the web address (URL) displayed in your browser's address bar, and the text of web pages opened inside other apps, so that blocked websites and keywords can be detected.</li>
+        </ul>
+        Both are used for one purpose only: to compare them against the apps, websites and keywords you chose to block, and to display a block screen when something matches. This happens entirely on your device and the data is discarded immediately after the check. We never store your browsing history, never transmit it off your device, and never share or sell it. The service does not read your messages, your passwords, or what you type.</li>
       <li><strong>Usage access</strong> - measures time spent in apps to power your limits and stats.</li>
       <li><strong>Display over other apps</strong> - shows the blocking screen on top of a blocked app.</li>
       <li><strong>Device admin (optional, only if you turn on "Prevent Uninstall")</strong> - stops the app from being uninstalled while a block is active. You can turn this off anytime.</li>
